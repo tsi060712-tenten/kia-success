@@ -419,11 +419,17 @@ header.on .navy {
     padding: 1.6rem 3.2rem;
     justify-content: center;
     align-items: center;
-    gap: 1.2rem;
     border-radius: 30px;
     background-color: #333;
     transition: all .3s;
     color: #fff;
+}
+.life-guide .left-txt .btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    
 }
 
 .life-guide .left-txt .btn img {
