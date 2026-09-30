@@ -1,0 +1,1460 @@
+@charset "utf-8";
+
+/* =========================
+   HEADER PAGE
+========================= */
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  transition: all 0.1s linear;
+}
+
+.headerbg {
+  position: absolute;
+  width: 100%;
+  height: 280px;
+  top: 99%;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid #ebebeb;
+  z-index: 9;
+  display: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .inner {
+  max-width: 1440px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 152px;
+  height: 35px;
+}
+
+header .logo a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+header .logo a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 152px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+}
+
+header .logo .navy {
+  display: none;
+}
+
+header .inner .gnb {
+  display: flex;
+  color: #fff;
+  gap: 12rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: var(--sub-letter-spacing);
+}
+
+header .inner .gnb > li {
+  position: relative;
+}
+
+header .inner .sub {
+  padding-top: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 260%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  transition: all 0.2s;
+  display: none;
+}
+
+header .inner .sub > li {
+  width: 100%;
+  display: block;
+  font-weight: 200;
+  padding: 10px 10px;
+  white-space: nowrap;
+  text-align: center;
+  color: #000;
+}
+
+header .inner .sub > li:hover {
+  font-weight: 400;
+}
+
+header .inner .side {
+  display: flex;
+  gap: 2.4rem;
+  transition: all 0.3s;
+  align-items: center;
+}
+
+header.on {
+  background-color: #fff;
+}
+
+header.none {
+  /* opacity: 0; */
+  top: -80px;
+}
+
+header.on .gnb {
+  color: #000;
+}
+
+header.on .side img {
+  filter: brightness(1) invert(1);
+}
+
+header.on .navy {
+  display: block;
+}
+
+/* =========================
+   DRIVING PAGE
+========================= */
+
+#driving {
+  width: 100%;
+}
+
+/* HERO */
+.hero-section {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.5;
+  overflow: hidden;
+}
+
+.hero-section > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-copy {
+  position: absolute;
+  left: 110px;
+  top: 31.5%;
+  color: #fff;
+}
+
+.hero-copy h2 {
+  font-family: "Syncopate", sans-serif;
+  font-size: 10rem;
+  padding-bottom: 5px;
+  font-weight: 700;
+}
+
+.hero-copy > span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.hero-copy p {
+  margin-top: 2.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+/* COMMON SECTION SPACING */
+.driving-spot,
+.driving-course,
+.in-car,
+.kia-care {
+  padding-top: 17rem;
+}
+
+.driving-spot {
+  padding-top: 20rem;
+}
+
+.section-heading {
+  position: relative;
+  padding-top: 9.2rem;
+}
+
+.section-heading > h3 {
+  position: absolute;
+  left: 0;
+  top: -30px;
+}
+
+.spot-card {
+  position: relative;
+  border-radius: 3.6rem;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+
+.spot-card {
+  aspect-ratio: 330 / 480;
+}
+
+.spot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.spot-dim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.spot-copy {
+  position: absolute;
+  left: 3.5rem;
+  bottom: 4.6rem;
+  color: #fff;
+}
+
+.spot-copy strong {
+  font-size: 3.6rem;
+}
+
+.spot-copy p {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.spot-comment,
+.spot-comment + .br {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.spot-comment {
+  margin-top: 9.2rem;
+}
+
+/* DRIVING COURSE */
+.coruse-list {
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.coruse-card {
+  display: grid;
+  grid-template-columns: 48.6% 51.4%;
+  min-height: 20rem;
+  border-radius: 4rem;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background: var(--things-bg-color);
+}
+
+.coruse-card > img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+}
+
+.course-info {
+  position: relative;
+  min-height: 20rem;
+  padding: 2rem 22rem 1.8rem 6.2rem;
+  background: var(--things-bg-color);
+  border-radius: 0;
+}
+
+.course-kicker {
+  color: var(--point-orange);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.course-info h3 {
+  margin-top: 0.8rem;
+  font-size: 2.4rem;
+}
+
+.course-desc {
+  margin-top: 0.4rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: #585658;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.tags span {
+  min-width: 8rem;
+  height: 2.7rem;
+  padding: 0 1rem;
+  border: 1px solid #818181;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #818181;
+  font-size: 1.2rem;
+}
+
+.course-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 19rem;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background: var(--navy-bg);
+  color: #fff;
+  font-weight: 700;
+  transition: 0.25s ease;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+/* IN-CAR */
+.in-car .inner {
+  position: relative;
+}
+
+.in-car-heading {
+  margin-bottom: 4.2rem;
+}
+
+.in-car-heading > div > span {
+  display: block;
+  margin-top: -1rem;
+  margin-left: 5px;
+}
+
+.in-car-top {
+  display: grid;
+  grid-template-columns: 34fr 66fr;
+  gap: 5rem;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
+}
+
+.in-car-left {
+  padding-top: 2rem;
+}
+
+.in-car-layout {
+  display: flex;
+  gap: 2.7rem;
+}
+
+.in-car-layout > div {
+  width: 5.2rem;
+  text-align: center;
+}
+
+.in-car-layout img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.in-car-layout span {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.object-title {
+  margin-top: 5.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.object-grid {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(6, 7.2rem);
+  gap: 1rem;
+}
+
+.object-grid > div {
+  text-align: center;
+}
+
+.object-grid img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.object-grid span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #585658;
+  line-height: 1.1;
+}
+
+.in-car-visuals {
+  position: relative;
+}
+
+.in-car-visuals em {
+  position: absolute;
+  right: 1.2rem;
+  top: -3.4rem;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #777;
+  z-index: 1;
+}
+
+.wide-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  aspect-ratio: 900 / 250;
+  overflow: hidden;
+  border-radius: 3rem;
+  isolation: isolate;
+  background: #000;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.wide-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transform: translateZ(0);
+}
+
+.in-car-visuals .wide-card,
+.in-car-visuals .small-card {
+  border-radius: 2rem !important;
+  overflow: hidden !important;
+}
+
+.in-car-visuals .wide-card img,
+.in-car-visuals .small-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+
+  border-radius: 2rem !important;
+  clip-path: inset(0 round 2rem) !important;
+}
+
+/* 이미지 위에 overlay가 있다면 모서리도 동일하게 */
+.in-car-visuals .wide-card::before,
+.in-car-visuals .wide-card::after,
+.in-car-visuals .small-card::before,
+.in-car-visuals .small-card::after {
+  border-radius: 2rem !important;
+}
+
+.wide-card strong,
+.wide-card > span {
+  position: absolute;
+  left: 1.9rem;
+}
+
+.wide-card strong {
+  bottom: 6.7rem;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+.wide-card > span {
+  bottom: 3rem;
+  color: #c7c7c7;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.visual-grid article {
+  position: relative;
+  aspect-ratio: 710 / 180;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.visual-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visual-grid article strong,
+.visual-grid article > span {
+  position: absolute;
+  left: 1rem;
+  color: #fff;
+}
+
+.visual-grid article strong {
+  bottom: 4.6rem;
+  font-size: 2.4rem;
+  font-style: italic;
+}
+
+.visual-grid article > span {
+  bottom: 1rem;
+  font-size: 1.2rem;
+  color: #d9d9d9;
+}
+
+/* KIA CARE */
+.care-heading span {
+  display: block;
+  margin-top: -0.5rem;
+  margin-left: 5px;
+  font-size: 2.4rem;
+  line-height: 2rem;
+  color: var(--sub-font-color);
+}
+
+.care-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 7.2rem;
+}
+
+.care-cards article {
+  position: relative;
+  aspect-ratio: 450 / 640;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  isolation: isolate;
+  cursor: pointer;
+}
+
+/* 카드 모양 */
+.care-cards article:first-child {
+  border-radius: 20rem 0 0 4rem;
+}
+
+.care-cards article:nth-child(2) {
+  border-radius: 0;
+}
+
+.care-cards article:last-child {
+  border-radius: 0 10rem 4rem 0;
+}
+
+/* 이미지 자체는 움직이지 않음 */
+.care-cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* 기본 상태: 영상처럼 전체를 살짝 어둡게 */
+.care-cards article::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* 텍스트 */
+.care-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 표시한 작은 설명문:
+   기본 상태에서는 숨김 */
+.care-copy p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(100% - 6.4rem);
+  margin: 0;
+  opacity: 0;
+
+  font-size: 2.4rem;
+  /* 기존 1.2rem의 2배 */
+  line-height: 1.4;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  word-break: keep-all;
+
+  transform: translate(-50%, -50%) scale(0.85);
+  transition:
+    opacity 0.35s ease,
+    transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+/* 큰 제목은 기존처럼 아래쪽에 유지 */
+.care-copy h3 {
+  position: absolute;
+  left: 3.2rem;
+  bottom: 3rem;
+  margin: 0;
+
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+/* =========================================================
+   KIA CARE HOVER
+   - hover 시 카드 중앙에 2배 크기로 등장
+   - 카드/이미지 크기는 그대로
+========================================================= */
+.care-cards article:hover::after {
+  opacity: 1;
+}
+
+.care-cards article:hover .care-copy p {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  color: #ffa82f;
+}
+
+/* 기존 공통 hover의 이미지 확대/제목 주황색 효과 제거 */
+.care-cards article:hover img {
+  transform: none !important;
+}
+
+.care-cards article:hover .care-copy h3 {
+  color: #fff !important;
+}
+
+/* CTA */
+.course-cta {
+  position: relative;
+  margin-top: 24rem;
+  aspect-ratio: 1920 / 487;
+  overflow: hidden;
+}
+
+.course-cta > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-copy {
+  position: absolute;
+  left: 11.5%;
+  top: 39%;
+  color: #fff;
+}
+
+.cta-copy h3 {
+  font-size: 6rem;
+  letter-spacing: -0.08em;
+  line-height: 1.3;
+}
+
+.cta-copy > span {
+  display: block;
+  margin-top: 2.5rem;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.cta-copy .more_btn {
+  margin-top: 3.2rem;
+  width: 19rem;
+  height: 4.5rem;
+  border-radius: 3rem;
+  background: #ebebeb;
+  color: #000;
+  display: flex;
+  gap: 12px;
+  transition: all 0.3s;
+  padding: 16px 20px;
+  font-weight: bold;
+}
+
+.cta-copy .more_btn img {
+  filter: brightness(1) invert(1);
+}
+
+.cta-copy .more_btn:hover {
+  background: var(--point-orange);
+  color: #000;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   FONT
+========================================================= */
+.driving-page,
+.driving-page * {
+  font-family: "Pretendard", sans-serif;
+}
+
+.section-heading > h3,
+.driving-course .section-title,
+.in-car-heading h3,
+.kia-care .care-heading h3 {
+  font-family: "Syncopate", sans-serif !important;
+  font-weight: 700;
+  letter-spacing: var(--title-letter-spacing);
+  font-size: 6rem;
+}
+footer .inner
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+.spot-card img,
+.wide-card img,
+.visual-grid article img,
+.care-cards article img {
+  transition: transform 0.4s ease;
+}
+
+.spot-card:hover img {
+  transform: scale(1.05);
+}
+
+.wide-card:hover img,
+.visual-grid article:hover img,
+.care-cards article:hover img {
+  transform: scale(1.04);
+}
+
+.spot-copy strong,
+.wide-card strong,
+.visual-grid article strong,
+.care-copy h3 {
+  transition: color 0.3s ease;
+}
+
+.spot-card:hover .spot-copy strong,
+.wide-card:hover strong,
+.visual-grid article:hover strong,
+.care-cards article:hover .care-copy h3 {
+  color: #d9912c;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  background-color: var(--navy-bg);
+  padding: 100px 20px;
+  color: #fff;
+}
+
+footer .inner {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1690px;
+}
+
+footer .ft-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3.6rem;
+  align-items: baseline;
+}
+
+footer .ft-top .logo {
+  width: 276px;
+}
+
+footer .ft-top .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+footer .ft-top > ul {
+  display: flex;
+  gap: 3.2rem;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+footer .ft-top > ul > li {
+  color: #ccc;
+  transition: all 0.3s;
+}
+
+footer .ft-top > ul > li:hover {
+  color: #fff;
+}
+
+footer .ft-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer .ft-bottom .ft-left {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding-bottom: 10rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+footer .ft-bottom .ft-left .ft-menu {
+  padding-bottom: 2.4rem;
+  display: flex;
+  gap: 3.2rem;
+  font-weight: 200;
+}
+
+footer .ft-bottom .ft-left .ft-menu > span {
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+footer .ft-service ul li {
+  position: relative;
+}
+
+footer .ft-service ul li:first-child {
+  color: #fff;
+  font-weight: 400;
+}
+
+footer .ft-service ul li + li::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  background-color: #ccc;
+}
+
+footer .ft-bottom .ft-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+footer .ft-bottom .ft-right .copy {
+  font-size: 2rem;
+  font-weight: 100;
+  color: #ccc;
+}
+
+footer .ft-bottom .ft-right .copy span {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+footer .ft-bottom .ft-right .sns-icon {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+footer .ft-bottom .ft-right .sns-icon img {
+  width: 32px;
+  aspect-ratio: 1 / 1;
+}
+
+footer .ft-bottom .ft-service ul {
+  display: flex;
+  gap: 3rem;
+  color: #ccc;
+  font-weight: 100;
+}
+
+footer .awards ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .awards ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+footer .awards ul li span {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.3;
+  font-weight: 100;
+}
+
+.awards ul li img {
+  width: 52px;
+  height: 34px;
+}
+
+/* ========================================= */
+.bottombox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  min-width: 0;
+}
+
+.bottombox img {
+  flex: 0 0 auto;
+  width: 5.2rem;
+  height: 5.2rem;
+  object-fit: contain;
+}
+
+.bottombox p {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   DRIVING SPOT - MORE
+   이미지 기준: MORE + 검정 화살표 / hover 시 MORE 밑줄만
+========================================================= */
+
+.driving-spot .section-heading {
+  position: relative;
+}
+
+.driving-spot .section-heading > a {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  /* 기존 HTML의 "MORE →" 텍스트는 숨기고
+       가상요소로 정확히 다시 그림 */
+  font-size: 1.6rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #333333;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.driving-spot .section-heading > a:hover {
+  font-weight: bold;
+}
+
+.driving-spot .section-heading > a:hover img {
+  transform: translateX(5px);
+}
+
+.driving-spot .section-heading > a img {
+  filter: brightness(1) invert(1);
+  padding-left: 10px;
+  transition: all 0.3s;
+}
+
+/* hover : 색상은 그대로, MORE 밑줄만 */
+.driving-spot .section-heading > a:hover::before {
+  background-size: 44px 1px;
+}
+
+.driving-spot .section-heading > a:hover::after {
+  color: #333333;
+}
+
+/* =========================================================
+   FINAL COURSE HOVER VIDEO FIX
+========================================================= */
+.coruse-card {
+  position: relative;
+}
+
+.course-hover-video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48.6%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 10;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+  background: #000;
+}
+
+.coruse-card.video-on .course-hover-video {
+  opacity: 1;
+  visibility: visible;
+}
+
+.course-button {
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.course-button:hover,
+.coruse-card.video-on .course-button {
+  background: var(--point-orange) !important;
+  color: #000 !important;
+}
+
+.course-button:hover img {
+  filter: brightness(1) invert(1);
+}
+
+/* =========================================================
+   IN-CAR DESKTOP OVERFLOW FIX
+   34% + 66% + gap 로 인한 우측 돌출 방지
+========================================================= */
+.in-car .inner {
+  overflow: visible;
+}
+
+.in-car-top {
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: minmax(0, 34fr) minmax(0, 66fr);
+}
+
+.in-car-left,
+.in-car-visuals {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.in-car-visuals {
+  width: 100%;
+}
+
+.wide-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.wide-card img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* =========================================================
+   SECTION COMMENT - TITLE UNDER
+========================================================= */
+.section-comment {
+  margin: 1.6rem 0 0;
+  text-align: left;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* DRIVING SPOT 제목 아래 */
+.section-heading .spot-section-comment {
+  position: absolute;
+  left: 5px;
+  top: 3rem;
+  z-index: 2;
+}
+
+/* 코멘트 공간만큼 카드 시작 위치 아래로 */
+.driving-spot .section-heading {
+  padding-top: 18rem;
+}
+
+/* DRIVING COURSE 제목 아래 */
+.driving-course .course-section-comment {
+  margin-top: -0.5rem;
+  margin-left: 5px;
+}
+
+/* 코멘트와 카드 사이 간격 */
+.driving-course .coruse-list {
+  margin-top: 5rem;
+}
+
+/* GOTOP BUTTON */
+body .wrap {
+  position: relative;
+}
+
+.gotop {
+  position: fixed;
+  z-index: 9999;
+  right: 30px;
+  bottom: 30px;
+  margin-left: auto;
+  margin-bottom: 30px;
+  width: 64px;
+  height: 64px;
+}
+
+.gotop .btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 500px;
+  background-color: var(--navy-bg);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.gotop .btn:hover {
+  background-color: var(--point-orange);
+}
+
+.gotop .btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* =========================================================
+   FOOTER RESPONSIVE RESTORE
+========================================================= */
+@media screen and (max-width: 815px) {
+  .course-cta {
+    aspect-ratio: 1920 / 1000;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cta-copy h3 {
+    font-size: 4rem;
+  }
+  footer {
+    padding: 60px 20px;
+  }
+
+  footer .ft-top,
+  footer .ft-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer .ft-top {
+    padding-bottom: 2.4rem;
+  }
+
+  footer .ft-top .logo {
+    width: 220px;
+  }
+
+  footer .ft-top > ul {
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    font-size: 1.5rem;
+  }
+
+  footer .ft-bottom .ft-left {
+    padding-bottom: 3rem;
+  }
+
+  footer .ft-bottom .ft-left .ft-menu {
+    flex-wrap: wrap;
+    gap: 14px 18px;
+    padding-bottom: 2rem;
+  }
+
+  footer .ft-bottom .ft-left .ft-menu > span {
+    font-size: 1.2rem;
+  }
+
+  footer .ft-bottom .ft-service ul {
+    flex-wrap: wrap;
+    gap: 1rem 1.6rem;
+    font-size: 1rem;
+  }
+
+  footer .ft-service ul li + li::after {
+    display: none;
+  }
+
+  footer .ft-bottom .ft-right {
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+
+  footer .ft-bottom .ft-right .copy {
+    font-size: 1.2rem;
+  }
+
+  footer .awards {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    aspect-ratio: 1 / 0.8;
+  }
+
+  footer {
+    padding: 50px 20px;
+  }
+
+  footer .ft-top .logo {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  footer .ft-top > ul {
+    gap: 10px 22px;
+    font-size: 1.2rem;
+  }
+
+  footer .ft-bottom .ft-left {
+    padding-bottom: 1rem;
+  }
+
+  footer .ft-bottom .ft-left .ft-menu {
+    flex-wrap: wrap;
+    gap: 14px 18px;
+    margin-bottom: 26px;
+    padding-bottom: 0;
+  }
+
+  footer .ft-bottom .ft-left .ft-menu > span,
+  footer .ft-bottom .ft-left .ft-menu a {
+    font-size: 1.2rem;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  footer .ft-bottom .ft-service ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer .ft-bottom .ft-right .copy {
+    margin-top: 10px;
+  }
+
+  footer .ft-bottom .ft-right .copy span {
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  footer .ft-bottom .ft-right .sns-icon {
+    gap: 18px;
+  }
+
+  footer .ft-bottom .ft-right .sns-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  footer .awards {
+    display: none !important;
+  }
+  .gotop {
+    width: 36px;
+    height: 36px;
+    right: 19px;
+    bottom: 18px;
+  }
+  .gotop .btn img {
+    max-width: 36px;
+    max-height: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE SECTION TITLE / COMMENT UNIFY
+   실제 HTML 구조 기준
+========================================================= */
+@media screen and (max-width: 768px) {
+  .driving-spot .main-title,
+  .driving-course .main-title,
+  .in-car-heading .main-title,
+  .kia-care .main-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "Syncopate", sans-serif !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.08em !important;
+    color: #222 !important;
+    text-align: left !important;
+  }
+
+  .driving-spot .section-comment,
+  .driving-course .section-comment,
+  .in-car-heading .sub-title,
+  .kia-care .care-heading > span {
+    display: block !important;
+    margin: 0.8rem 0 0 !important;
+    padding: 0 !important;
+    font-family: "Pretendard", sans-serif !important;
+    font-size: 1.6rem !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.04em !important;
+    color: #333 !important;
+    text-align: left !important;
+  }
+
+  .driving-spot .section-heading {
+    position: relative;
+    padding-top: 10rem !important;
+  }
+
+  .driving-spot .section-heading > h3 {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  .driving-spot .section-heading .spot-section-comment {
+    position: absolute !important;
+    left: 0 !important;
+    top: 4.4rem !important;
+    margin: 0 !important;
+  }
+
+  .driving-spot .section-heading > a {
+    top: 0.8rem !important;
+    right: 0 !important;
+    font-size: 1.4rem !important;
+  }
+
+  .driving-course .course-section-comment {
+    margin: 0.8rem 0 0 !important;
+  }
+
+  .in-car-heading {
+    margin-bottom: 3rem !important;
+  }
+
+  .in-car-heading > div > span {
+    margin: 0.8rem 0 0 !important;
+  }
+
+  .kia-care .care-heading > span {
+    margin: 0.8rem 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .driving-spot .main-title,
+  .driving-course .main-title,
+  .in-car-heading .main-title,
+  .kia-care .main-title {
+    font-size: 2.8rem !important;
+  }
+
+  .driving-spot .section-comment,
+  .driving-course .section-comment,
+  .in-car-heading .sub-title,
+  .kia-care .care-heading > span {
+    font-size: 1.5rem !important;
+  }
+
+  .driving-spot .section-heading {
+    padding-top: 9.5rem !important;
+  }
+
+  .driving-spot .section-heading .spot-section-comment {
+    top: 4.2rem !important;
+  }
+
+  .driving-spot .section-heading > a {
+    top: 0.7rem !important;
+    font-size: 1.3rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .course-cta {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .course-cta > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+}

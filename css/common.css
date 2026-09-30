@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+:root {
+    /* color system */
+    --sub-bg-color: #fff;
+    --btn-color : #333;
+    --things-bg-color : #f0ede7;
+    --point-orange : #ffa82f;
+    --main-bg-color : #ebebeb;
+    --navy-bg : #05141f;
+    
+    /* typography */
+    --title-font-color : #222;
+    --title-font-weight : 700;
+    --title-font-size : 6rem;
+    --title-letter-spacing : -8%; 
+    --sub-font-color : #333;
+    --sub-font-size : 2.4rem;
+    --sub-letter-spacing : -2%; 
+    --line-hegiht : 1.3;
+    --more-font-size : 1.6rem;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-Thin.otf');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-ExtraLight.otf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-Light.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-Regular.otf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-Medium.otf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-SemiBold.otf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-Bold.otf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-ExtraBold.otf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('../font/Pretendard-Black.otf');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Syncopate';
+    src: url('../font/Syncopate-Regular.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Syncopate';
+    src: url('../font/Syncopate-Bold.ttf');
+    font-weight: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scrollbar-width: smooth;
+    font-size: 10px;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}

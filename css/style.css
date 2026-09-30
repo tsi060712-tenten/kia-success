@@ -1,0 +1,1124 @@
+body {
+    font-family: 'pretendard';
+    letter-spacing: -2%;
+    overflow-x: hidden;
+}
+
+section {
+    background-color: var(--main-bg-color);
+}
+
+section .inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 150px 20px;
+}
+
+h3.top {
+    font-size: 5rem;
+    font-family: 'Syncopate';
+    font-weight: bold;
+    letter-spacing: -8%;
+    color: #333;
+    padding-bottom: 1.6rem;
+    line-height: 1.2;
+}
+
+body .wrap {
+    position: relative;
+}
+
+/* header 시작 */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    transition: all .1s linear;
+}
+
+.headerbg {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    top: 99%;
+    left: 0;
+    background-color: #fff;
+    border-top: 1px solid #ebebeb;
+    z-index: 9;
+    display: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .1);
+}
+
+header .inner {
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 152px;
+    height: 35px;
+}
+
+header .logo a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+header .logo a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .logo .navy {
+    display: none;
+}
+
+
+header .inner .gnb {
+    display: flex;
+    color: #fff;
+    gap: 12rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: var(--sub-letter-spacing);
+}
+
+header .inner .gnb > li {
+    position: relative;
+}
+
+header .inner .sub {
+    padding-top: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 260%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    transition: all .2s;
+    display: none;
+}
+
+header .inner .sub>li {
+    width: 100%;
+    display: block;
+    font-weight: 200;
+    padding: 10px 10px;
+    white-space: nowrap;
+    text-align: center;
+    color: #000;
+}
+
+header .inner .sub>li:hover {
+    font-weight: 400;
+}
+
+header .inner .side {
+    display: flex;
+    gap: 2.4rem;
+    transition: all .3s;
+    align-items: center;
+}
+
+header.on {
+    background-color: #fff;
+}
+header.none {
+    /* opacity: 0; */
+    top: -80px;
+}
+header.on .gnb {
+    color: #000;
+}
+
+header.on .side img {
+    filter: brightness(1) invert(1);
+}
+
+header.on .navy {
+    display: block;
+}
+
+
+/* section hero 시작 */
+
+.hero {
+    width: 100%;
+    background-color: #fff;
+}
+
+.hero .video-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 0.5;
+    position: relative;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .ask_btn {
+    display: flex;
+    padding: 1.6rem 2rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 77px;
+    position: absolute;
+    bottom: 13.7%;
+    right: 4%;
+    font-size: 1.6rem;
+    transition: all .3s;
+}
+
+.hero .ask_btn:hover {
+    background-color: var(--point-orange);
+}
+
+/* aos section 시작 */
+.aos {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.aos .movement {
+    margin: 100px 0;
+    overflow: hidden;
+}
+
+.aos .movement h2 {
+    font-family: 'Syncopate';
+    font-size: 56px;
+    font-weight: bold;
+    padding-bottom: 3.2rem;
+    color: var(--title-font-color);
+}
+
+.aos .movement span {
+    font-weight: 400;
+    font-size: 3.2rem;
+    color: var(--sub-font-color);
+}
+
+/* section find 시작 */
+.find {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.find::before {
+    content: "";
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background: url('../img/yourlife_bg.png') no-repeat;
+}
+
+.find .inner {
+    width: 100%;
+    position: relative;
+    padding: 150px 0;
+}
+
+.find .inner .title {
+    text-align: right;
+    padding-top: 70px;
+    display: inline-block;
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.find .inner .title h3 {
+    font-family: 'Syncopate';
+    font-size: var(--title-font-size);
+    font-weight: var(--title-font-weight);
+    color: var(--title-font-color);
+    letter-spacing: var(--title-letter-spacing);
+}
+
+.find .inner .title span {
+    font-size: var(--sub-font-size);
+    letter-spacing: var(--sub-letter-spacing);
+    font-weight: 300;
+    color: var(--sub-font-color);
+}
+
+.find .inner .car .txt-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    color: #fff;
+}
+
+.find .inner .txt-box b {
+    font-size: 3.2rem;
+}
+
+.find .inner .txt-box span {
+    font-size: 2rem;
+    padding-bottom: 1.2rem;
+    font-weight: 100;
+}
+
+.more {
+    display: inline;
+    font-size: 1.6rem;
+}
+
+.more a {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 200;
+    color: #ccc;
+}
+
+.more a:hover {
+    color: #fff;
+    transition: all .3s;
+    font-weight: 600;
+}
+
+.more a img {
+    transition: all .3s;
+}
+
+.more a:hover img {
+    filter: brightness(0) invert(1);
+    transform: translateX(3px);
+}
+
+.find .inner .car-shape {
+    width: 100%;
+    height: 100vh;
+    max-width: 100vw;
+}
+
+.car-shape .car {
+    position: absolute;
+    /* width: 100%; */
+}
+.car-shape .car:hover .more img {
+    transform: translateX(5px);
+}
+.car-shape .car:hover .more a {
+    font-weight: bold;
+}
+
+.car img {
+    width: 100%;
+}
+
+.car-shape .outdoor {
+    position: absolute;
+    top: 17%;
+    left: -14%;
+}
+
+.car-shape .outdoor .txt-box {
+    top: 35%;
+    left: 10%;
+}
+
+.car-shape .family {
+    position: absolute;
+    right: -13%;
+    top: 33%;
+}
+
+.car-shape .family .txt-box {
+    top: 40%;
+    left: 25%;
+}
+
+.car-shape .urban {
+    position: absolute;
+    left: -10%;
+    top: 50%;
+}
+
+.car-shape .urban .txt-box {
+    top: 35%;
+    left: 25%;
+}
+
+.car-shape .ev {
+    position: absolute;
+    right: -10%;
+    top: 63%;
+}
+
+.car-shape .ev .txt-box {
+    top: 35%;
+    left: 15%;
+}
+
+/* life-guide section 시작 */
+.life-guide {
+    background-color: var(--navy-bg);
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.life-guide .inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.life-guide .left-txt>span {
+    color: var(--point-orange);
+    font-size: 2.4rem;
+    font-weight: 100;
+}
+
+.life-guide .left-txt .top {
+    color: #fff;
+    padding: 45px 0;
+}
+
+.life-guide .left-txt p {
+    padding-top: 45px;
+    font-weight: 200;
+    color: #fff;
+    padding-bottom: 45px;
+    line-height: 1.3;
+    font-size: 2rem;
+}
+
+.life-guide .left-txt .line {
+    width: 44px;
+    height: 1px;
+    background-color: var(--point-orange);
+}
+
+.life-guide .left-txt .btn {
+    display: flex;
+    font-size: 1.6rem;
+    width: 140px;
+    height: 50px;
+    padding: 1.6rem 3.2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    border-radius: 30px;
+    background-color: #333;
+    transition: all .3s;
+    color: #fff;
+}
+
+.life-guide .left-txt .btn img {
+    transition: all .3s;
+}
+
+.life-guide .left-txt .btn:hover {
+    background-color: var(--point-orange);
+    color: #000;
+}
+
+.life-guide .left-txt .btn:hover img {
+    transform: translateX(4px);
+    filter: brightness(1) invert(1);
+}
+
+/* card slide 시작 */
+.life-guide .right-slide {
+    width: 1175px;
+    height: 597px;
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    right: -25%;
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+.life {
+    width: 100%;
+    height: 597px;
+    overflow: visible;
+    perspective: 1200px;
+}
+
+.life .swiper-wrapper {
+    height: 100%;
+    overflow: visible;
+}
+
+.life .swiper-slide {
+    height: 100%;
+    border-radius: 80px;
+    overflow: hidden;
+    transform-origin: center center;
+    position: relative;
+}
+.life .swiper-slide b {
+    font-size: 2.4rem;
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transform: rotate(-180deg);
+    font-family: 'Syncopate';
+    font-weight: 500;
+    letter-spacing: -4%;
+}
+
+.life .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+/* magazine section 시작 */
+.magazine {
+    padding: 100px 0;
+    background: url('../img/magazine.png') no-repeat right / 55%;
+}
+
+.magazine .inner .txt-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.magazine .inner .txt-left>span {
+    letter-spacing: var(--sub-letter-spacing);
+    font-size: 2.4rem;
+    font-weight: 200;
+    padding-bottom: 80px;
+}
+
+.num {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    font-family: 'Syncopate';
+    font-weight: 200;
+    font-size: 2rem;
+    letter-spacing: var(--sub-letter-spacing);
+    align-items: baseline;
+    padding-bottom: 2rem;
+}
+
+.num i {
+    font-style: normal;
+    font-size: 3.6rem;
+    font-weight: 100;
+}
+
+.magazine .inner .txt-left .num>span {
+    position: relative;
+}
+
+.magazine .inner .txt-left .num>span::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    position: absolute;
+    left: 9px;
+    top: -7px;
+    background-color: #000;
+}
+
+.magazine .inner .detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.magazine .inner .detail h4 {
+    font-size: 3.8rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
+    letter-spacing: var(--sub-letter-spacing);
+}
+
+.magazine .inner .detail span {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.3;
+    padding-bottom: 54px;
+}
+
+.magazine .inner .detail .more p {
+    color: #000;
+}
+
+.magazine .inner .detail .more img {
+    filter: brightness(0);
+}
+
+/* editor section 시작 */
+.editor {
+    margin: 0 auto;
+}
+
+.editor .inner {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.editor .inner .title {
+    padding-bottom: 4rem;
+}
+
+.editor .inner .title span {
+    font-size: 2.4rem;
+    font-weight: 200;
+}
+
+.editor .gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.editor .gallery li {
+    transition: all .3s;
+    /* width: 100%; */
+}
+.editor .gallery li:hover {
+    transform: translateY(-8px);
+}
+.editor .gallery li a {
+    width: 100%;
+    position: relative;
+}
+
+.editor .gallery .pick {
+    margin-top: 1.6rem;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.editor .gallery .pick i {
+    font-size: 2.8rem;
+    font-weight: 200;
+}
+
+.editor .gallery .detail {
+    width: 100%;
+    position: absolute;
+    bottom: 4%;
+    opacity: 0;
+    left: 5%;
+    padding-left: 1rem;
+    color: #fff;
+    transition: all .3s;
+}
+
+.editor .gallery li a:hover .detail {
+    opacity: 1;
+    bottom: 8%;
+}
+
+
+.editor .gallery li a:hover .img-box::after {
+    opacity: 1;
+}
+
+.editor .gallery li .img-box {
+    position: relative;
+}
+
+.editor .gallery li .img-box::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.editor .gallery .detail h4 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    white-space: nowrap;
+}
+
+.editor .gallery .detail span {
+    font-size: 2rem;
+    font-weight: 100;
+    white-space: nowrap;
+}
+
+/* sixth section 시작 */
+.sixth .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sixth .inner .trend {
+    display: flex;
+    gap: 70px;
+}
+
+.sixth .inner .insight {
+    display: flex;
+    /* gap: 160px; */
+    justify-content: space-between;
+
+}
+
+.insight .spot {
+    padding-top: 9.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.insight .spot span {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: var(--sub-letter-spacing);
+}
+
+.insight .spot p {
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: #666;
+}
+
+.sixth .inner .left-txt .num>span {
+    position: relative;
+}
+
+.sixth .inner .left-txt .num>span::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    position: absolute;
+    left: 4px;
+    top: -7px;
+    background-color: #000;
+}
+
+.sixth .inner .detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.sixth .inner .detail h4 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    padding-bottom: 1.2rem;
+    letter-spacing: var(--sub-letter-spacing);
+}
+
+.sixth .inner .detail span {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.3;
+    padding-bottom: 54px;
+}
+
+.sixth .inner .detail .more p {
+    color: #000;
+}
+
+.sixth .inner .detail .more img {
+    filter: brightness(0);
+}
+
+.sixth .img-box {
+    padding-left: 30px;
+    position: relative;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.sixth .img-box:hover {
+    transform: translateY(-10px);
+}
+
+.sixth .img-box .img-txt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.sixth .img-box .img-txt p {
+    font-weight: 100;
+    font-size: 2.4rem;
+}
+
+.sixth .img-box .img-txt span {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/* community section 시작 */
+.community {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.community::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 33%;
+    background: url("../img/community_bg.png") no-repeat top;
+    z-index: 99;
+}
+
+.community .glass-wrap {
+    position: relative;
+}
+
+.community::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.community .slide-wrap {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1070px;
+    height: 1000px;
+}
+
+.insta .swiper-wrapper,
+.insta-down .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+.insta .swiper-slide {
+    height: 50px;
+}
+
+.community .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px 0;
+    z-index: 999;
+}
+
+.community .inner {
+    max-width: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* border-radius: 2rem; */
+}
+
+.community .glass {
+    text-align: center;
+}
+
+.community .glass h3 {
+    color: #fff;
+}
+
+.community .glass .sns {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    color: #fff;
+    margin-top: 1.6rem;
+}
+
+.community .glass .sns li {
+    padding: 1.2rem 2.8rem;
+    background-color: rgba(4, 4, 4, .7);
+    border-radius: 50px;
+    font-size: 2rem;
+    font-weight: 300;
+    transition: all .3s;
+}
+
+.community .glass .sns li:hover {
+    background-color: var(--main-bg-color);
+    color: #000;
+}
+
+
+/* campaign section 시작 */
+.campaign {
+    background-color: #fff;
+    /* padding: 100px 0; */
+}
+
+.campaign .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.campaign .inner .left-img {
+    width: 100%;
+
+}
+
+.campaign .inner .left-img img {
+    width: 100%;
+}
+
+.campaign .inner .right-txt {
+    text-align: right;
+    padding-bottom: 30px;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+.campaign .inner .right-txt span {
+    font-weight: 200;
+    font-size: 2.4rem;
+}
+
+.campaign .inner .right-txt span .line {
+    display: flex;
+    justify-content: flex-end;
+    width: 10px;
+    height: 1px;
+    background-color: #000;
+}
+
+.campaign .inner .drive {
+    padding-top: 1.6rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.campaign .inner .safe-drive a,
+.clean-drive a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 2rem;
+}
+.drive img {
+    transform: translate(0, 0);
+    transition: all .3s;
+}
+.drive a:hover img {
+    transform: translate(2px, -2px);
+}
+
+/* gotop 시작 */
+.gotop {
+    position: fixed;
+    z-index: 9999;
+    right: 30px;
+    bottom: 30px;
+    margin: 0;
+    width: 64px;
+    height: 64px;
+}
+
+/* main.wrap의 끝이 footer 시작점이므로 여기에서 정확히 정지 */
+.gotop.footer-stop {
+    position: absolute !important;
+    bottom: 30px !important;
+}
+
+.gotop .btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 500px;
+    background-color: var(--navy-bg);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    position: relative;
+    transition: all .3s;
+}
+
+.gotop .btn:hover {
+    background-color: var(--point-orange);
+}
+
+.gotop .btn img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* footer 시작 */
+footer {
+    background-color: var(--navy-bg);
+    padding: 100px 20px;
+    color: #fff;
+}
+
+footer .inner {
+    margin: 0 auto;
+    max-width: 1690px;
+}
+
+footer .ft-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3.6rem;
+    align-items: baseline;
+}
+
+footer .ft-top .logo {
+    width: 276px;
+}
+
+footer .ft-top .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+footer .ft-top>ul {
+    display: flex;
+    gap: 3.2rem;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+footer .ft-top>ul>li {
+    color: #ccc;
+    transition: all .3s;
+}
+
+footer .ft-top>ul>li:hover {
+    color: #fff;
+}
+
+footer .ft-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .ft-bottom .ft-left {
+    display: flex;
+    justify-content: start;
+    font-size: 1.6rem;
+    color: #fff;
+    flex-direction: column;
+    padding-bottom: 10rem;
+}
+
+footer .ft-bottom .ft-left .ft-menu {
+    padding-bottom: 2.4rem;
+    display: flex;
+    gap: 3.2rem;
+    font-weight: 200;
+}
+
+footer .ft-service ul li {
+    position: relative;
+    word-break: keep-all;
+}
+
+footer .ft-service ul li:first-child {
+    color: #fff;
+    font-weight: 400;
+}
+
+footer .ft-service ul li+li::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    background-color: #ccc;
+}
+
+footer .ft-bottom .ft-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+footer .ft-bottom .ft-right .copy {
+    font-size: 2rem;
+    font-weight: 100;
+    color: #ccc;
+}
+
+footer .ft-bottom .ft-right .sns-icon {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+footer .ft-bottom .ft-right .sns-icon img {
+    width: 32px;
+    aspect-ratio: 1 / 1;
+}
+
+footer .ft-bottom .ft-service ul {
+    display: flex;
+    gap: 3rem;
+    color: #ccc;
+    font-weight: 100;
+}
+
+footer .awards ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .awards ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #ccc;
+    line-height: 1.3;
+}
+
+.awards ul li img {
+    width: 52px;
+    height: 34px;
+}
